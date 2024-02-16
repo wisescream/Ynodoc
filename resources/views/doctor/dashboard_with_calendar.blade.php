@@ -13,18 +13,57 @@
 
 <style>
     .selected {
-        background-color: #ccc; /* Couleur grise pour les dates sélectionnées */
-        cursor: pointer; /* Définir le curseur sur pointer pour indiquer que les dates sont cliquables */
+        background-color: #007bff; /* Blue color for selected dates */
+        color: #fff; /* White text for selected dates */
+        cursor: pointer;
     }
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 20px;
     }
 
     #calendar {
-        margin-top: 100px; /* Ajouter un espacement entre le titre h1 et le calendrier */
+        margin-top: 50px;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .center-content {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        padding: 0px 10px;
+    }
+
+    .calendar-day {
+        transition: background-color 0.3s;
+    }
+
+    .calendar-day:hover {
+        background-color: #f8f9fa;
     }
 
 </style>
